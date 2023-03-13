@@ -23,7 +23,7 @@ a {
 }
 .content {
     width: 1110px;
-    max-width: calc(100% -48px);
+    max-width: calc(100% - 48px);
     /* dùng max-width chỗ này để khi trình duyệt nhỏ hơn 1110px thì các phần tử không bị che mất và trừ 48px vì khi kéo nhỏ trình duyệt hơn 1110px thì các phân hai bên cách 24 px tổng là 48px */
     margin: auto;
 }
@@ -59,6 +59,7 @@ a {
 .hero-wrap {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     position: relative;
     background-color: #e6f0ff;
     height: calc(100vh - 90px);
@@ -94,15 +95,13 @@ a {
     margin-left: 18px;
     border-radius: 8px;
 }
-.hero {
-    margin-top: 130px;
-}
-.hero .info {
+
+.hero-wrap .info {
     width: 51%;
     /* tại sao tại vị trí này là 51%? vì kích thước width của khối info là 559px nhưng ta ko thể đăt kích thước cứng cho nó vì vây phải lấy 1110px:559px=51% */
 }
 
-.hero .sub-title {
+.hero-wrap .sub-title {
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -110,7 +109,7 @@ a {
     letter-spacing: 0.01em;
     color: #687690;
 }
-.hero .title {
+.hero-wrap .title {
     margin-top: 8px;
     font-weight: 700;
     font-size: 6.2rem;
@@ -119,7 +118,7 @@ a {
     /* or 119% */
     color: #000336;
 }
-.hero .desc {
+.hero-wrap .desc {
     margin-top: 30px;
     font-weight: 400;
     font-size: 1.8rem;
@@ -127,13 +126,13 @@ a {
     /* or 178% */
     color: #5a6473;
 }
-.hero .hero-cta {
+.hero-wrap .hero-cta {
     margin-top: 40px;
     min-width: 170px;
 }
 .hero-img {
     position: absolute;
-    right: calc((100vw - 1110px - 100px) / 2);
+    right: calc((100vw - 1110px) / 2 - 100px);
     bottom: 0;
 }
 /* ====================Client===================== */
